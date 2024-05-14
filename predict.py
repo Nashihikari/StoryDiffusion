@@ -16,10 +16,10 @@ from diffusers.utils import load_image
 
 from utils import PhotoMakerStableDiffusionXLPipeline
 from utils.style_template import styles
-from utils.gradio_utils import (
+from StoryDiffusion.utils.gradio_utils import (
     AttnProcessor2_0 as AttnProcessor,
 )  # with torch2 installed
-from utils.gradio_utils import cal_attn_mask_xl
+from StoryDiffusion.utils.gradio_utils import cal_attn_mask_xl
 from utils.utils import get_comic
 
 MODEL_URL = "https://weights.replicate.delivery/default/HVision_NKU/StoryDiffusion.tar"

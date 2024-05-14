@@ -8,7 +8,7 @@ import os
 import random
 import datetime
 from PIL import ImageFont
-from utils.gradio_utils import (
+from StoryDiffusion.utils.gradio_utils import (
     character_to_dict,
     process_original_prompt,
     get_ref_character,
@@ -18,9 +18,9 @@ from utils.gradio_utils import (
 )
 
 if is_torch2_available():
-    from utils.gradio_utils import AttnProcessor2_0 as AttnProcessor
+    from StoryDiffusion.utils.gradio_utils import AttnProcessor2_0 as AttnProcessor
 else:
-    from utils.gradio_utils import AttnProcessor
+    from StoryDiffusion.utils.gradio_utils import AttnProcessor
 from huggingface_hub import hf_hub_download
 from diffusers.pipelines.stable_diffusion_xl.pipeline_stable_diffusion_xl import (
     StableDiffusionXLPipeline,

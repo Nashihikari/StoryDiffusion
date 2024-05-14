@@ -13,19 +13,19 @@ import pickle
 from PIL import Image
 from tqdm.auto import tqdm
 from datetime import datetime
-from utils.gradio_utils import is_torch2_available
+from StoryDiffusion.utils.gradio_utils import is_torch2_available
 if is_torch2_available():
-    from utils.gradio_utils import \
+    from StoryDiffusion.utils.gradio_utils import \
         AttnProcessor2_0 as AttnProcessor
 else:
-    from utils.gradio_utils  import AttnProcessor
+    from StoryDiffusion.utils.gradio_utils  import AttnProcessor
 
 import diffusers
 from diffusers import StableDiffusionXLPipeline
 from utils import PhotoMakerStableDiffusionXLPipeline
 from diffusers import DDIMScheduler
 import torch.nn.functional as F
-from utils.gradio_utils import cal_attn_mask_xl
+from StoryDiffusion.utils.gradio_utils_legacy import cal_attn_mask_xl
 import copy
 import os
 from diffusers.utils import load_image
